@@ -13,7 +13,7 @@ class Main {
       float result = num + num2;
       char c = 'D';
       char e = 'D';
-      char d ="f";
+      char dd ='f';
       boolean isHuman = false;
         System.out.println(8+7);
         System.out.println(result);
