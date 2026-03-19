@@ -4,6 +4,11 @@ class Main {
         int num1 = 7;
         // num1++; //post increment
         // ++num1; // pre increement
-        System.out.println(num1);
+        // int result = ++ num1;
+        int result2 = ++ num1;
+        int result3 = num1;
+        // System.out.println(result);
+        System.out.println(result2);
+        System.out.println(result3);
     }
 }
