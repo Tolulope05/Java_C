@@ -1,10 +1,12 @@
 class Main {
     public static void main(String[] args){
        // TYPE PROMOTION
-        int num1 = 7;
-        int num2 = 8;
-        boolean result = num1> num2;
-        System.out.println(result);
+        int x = 15;
+        
+        if(x>12 && x<=20) // 13 - 20
+            System.out.println("Hello");
+        else 
+            System.out.println("Bye");
         
     } 
 }
