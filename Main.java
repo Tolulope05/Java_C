@@ -1,12 +1,18 @@
 class Main {
     public static void main(String[] args){
        // TYPE PROMOTION
-        int x = 15;
+        int x = 5;
+        int y  = 7;
         
-        if(x>12 && x<=20) // 13 - 20
-            System.out.println("Hello");
+        // PRINT GREATEST NUMBER
+        if (x>y)
+        {
+            System.out.println(x);
+        }
+        else if (y<2)
+            System.out.println("Y is greater than 2");
         else 
-            System.out.println("Bye");
+            System.out.println("NONE");
         
     } 
 }
