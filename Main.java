@@ -1,48 +1,20 @@
 class Main {
-    public static void main(String[] args){
-       // SWITCH STATEMENTS
-       int n = 2;
-    //    if(n==1)
-    //         System.out.println("Monday");
-    //     else if(n==2)
-    //         System.out.println("Tuesday");
-    //     else if(n==3)
-    //         System.out.println("Wednesday");
-    //     else if(n==4)
-    //         System.out.println("Thursday");
-    //     else if(n==5)
-    //         System.out.println("Friday");
-    //     else if(n==6)
-    //         System.out.println("Saturday");
-    //     else if(n==7)
-    //     System.out.println("Sunday");
-
-        switch (n) {
-            case 1:
-                System.out.println("Monday");
-                break;
-            case 2:
-                System.out.println("Tuesday");
-                break;
-            case 3:
-                System.out.println("Wednesday");
-                break;
-            case 4:
-                System.out.println("Thursday");
-                break;
-        
-            case 5:
-                System.out.println("Friday");
-                break;
-            case 6:
-                System.out.println("Saturday");
-                break;
-            case 7:
-                System.out.println("Sunday");
-                break;
-        
-            default:
-                System.out.println("Unknown");
+    public static void main(String[] a){
+       // LOOP
+       // loop - while, do while, for
+       int i =1;
+       while(i <= 4)
+       {
+            System.out.println("HI " + i);
+            int j = 1;
+            while (j <= 3) {
+                
+                System.out.println("Hello" + j);
+                j++;
+            }
+            i++;
         }
-    } 
+        System.out.println("BYE"+ i);
+
+    }
 }
