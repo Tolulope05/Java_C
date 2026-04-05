@@ -1,20 +1,13 @@
 class Main {
     public static void main(String[] a){
        // LOOP
-       // loop - while, do while, for
-       int i =1;
-       while(i <= 4)
-       {
+       // do while
+    //    It exectures the block once een if the condition is false
+       int i =5;
+       
+      do {
             System.out.println("HI " + i);
-            int j = 1;
-            while (j <= 3) {
-                
-                System.out.println("Hello" + j);
-                j++;
-            }
             i++;
-        }
-        System.out.println("BYE"+ i);
-
+        }while(i <= 4);
     }
 }
