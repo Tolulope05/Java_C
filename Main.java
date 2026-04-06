@@ -1,39 +1,23 @@
+ class Calculator {
+    int a =4;
+    int b =3;
+    public int add(){
+        System.out.println("in add");
+        return a+b;
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
 
-        double num1 = 7;
+        double num1 = 4;
         double num2 = 3;
-        char operator = '+';
 
-        String again = "y";
+        Calculator calc = new Calculator(); // How you create an object instance using new keyword.
 
-        while (again.equals("y")) {
+        int result = calc.add();
+        System.out.println(result);
 
-            if (operator == '+') {
-                System.out.println("Result: " + (num1 + num2));
-            } 
-            else if (operator == '-') {
-                System.out.println("Result: " + (num1 - num2));
-            } 
-            else if (operator == '*') {
-                System.out.println("Result: " + (num1 * num2));
-            } 
-            else if (operator == '/') {
-                if (num2 == 0) {
-                    System.out.println("Cannot divide by zero.");
-                } else {
-                    System.out.println("Result: " + (num1 / num2));
-                }
-            } 
-            else {
-                System.out.println("Invalid operator.");
-            }
-
-            // End loop after one run
-            again = "n";
-        }
-
-        System.out.println("Thank you for using the calculator.");
     }
 }
 
