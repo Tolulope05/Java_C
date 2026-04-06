@@ -1,21 +1,20 @@
  class Calculator {
-    int a =4;
-    int b =3;
-    public int add(){
+
+    public int add(int ni, int n2){
         System.out.println("in add");
-        return a+b;
+        return ni + n2;
     }
 }
 
 public class Main {
     public static void main(String[] args) {
 
-        double num1 = 4;
-        double num2 = 3;
+        int num1 = 4;
+        int num2 = 3;
 
         Calculator calc = new Calculator(); // How you create an object instance using new keyword.
 
-        int result = calc.add();
+        int result = calc.add(num1, num2);
         System.out.println(result);
 
     }
