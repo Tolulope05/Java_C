@@ -1,6 +1,6 @@
  class Calculator {
-
-    public int add(int ni, int n2){
+int a; // what object knows  (property)
+    public int add(int ni, int n2){ // Add: what object does (function)
         System.out.println("in add");
         return ni + n2;
     }
