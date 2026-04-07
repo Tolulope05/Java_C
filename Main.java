@@ -1,26 +1,34 @@
-
 public class Main {
-    public static void main(String[] args) { // start of execution
-        //MULTI DIMENSIONAL ARRAYS (JAGGED ARRAY)
-             int nums[][]= new int[3][]; // 3 row, JAGGED ARRAY
-             // WE HAVE TO SPECIFY THE COLUMNS SIZES
-             nums[0] = new int[3];
-             nums[1] = new int[4];
-             nums[2] = new int[2];
-   
+    public static void main(String[] args) {
+        // Define the dimensions of the 3D array
+        int rows = 3;
+        int cols = 4;
+        int depth = 2;
 
-        for(int i =0; i<nums.length;i++){
-            for(int j=0;j<nums[i].length;j++){
-                nums[i][j] = (int)(Math.random() * 10);
+        // Initialize the 3D array with a specific value
+        int[][][] array3d = new int[depth][rows][cols];
+        for (int i = 0; i < depth; i++) {
+            for (int j = 0; j < rows; j++) {
+                for (int k = 0; k < cols; k++) {
+                    array3d[i][j][k] = i * rows * cols + j * cols + k + 1;
+                }
             }
         }
-    
-        for(int n[]: nums){
-            for(int m : n){
-                System.out.print("PICKING VALUE "+ m + " ");
+
+        // Print the 3D array
+        for (int i = 0; i < depth; i++) {
+            System.out.print("[");
+            for (int j = 0; j < rows; j++) {
+                System.out.print("[");
+                for (int k = 0; k < cols; k++) {
+                    System.out.print(array3d[i][j][k]);
+                    if (k < cols - 1) {
+                        System.out.print(" ");
+                    }
+                }
+                System.out.print("]");
             }
-            System.out.println();
-        } // EHANCED FORLOOP
+            System.out.println("]");
+        }
     }
 }
-
