@@ -1,21 +1,19 @@
-class Computer {
-    // METHOD OVERLOADING: Two or three nethids with same name but different paramters
-    public int add(int n1, int n2, int n3){
-        int result = n1+n2+n3;
-        return result;
-    }
-    public double add(double n1, int n2){
-        double result = n1+n2;
-        return result;
-    }
-}
+
 public class Main {
+    // ARRAYS
     public static void main(String[] args) { // start of execution
-        Computer obj = new Computer();
-        int r1=    obj.add(5, 4,5);
-        double r2=    obj.add(5, 4);
-        System.out.println(r1);
-        System.out.println(r2);
+            int nums[] = {3,5,6,7}; // defining array SYNATAX 1
+            int nums2[] = new int[4]; // syntax 2 // 4 boxes, all the vlaues are 0
+
+            nums[1] = 6; // updating an array
+            nums2[1] = 9;
+            // System.out.println(nums[1]);
+            // System.out.println(nums2[1]);
+
+            // FETCH ALL THE VALUES
+           for(int i=0; i<= 3;i++){
+            System.out.println(nums[i]);
+           }
     }
 }
 
