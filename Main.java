@@ -58,7 +58,7 @@ class Mobile {
 }
 
 public class Main {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws ClassNotFoundException {
 
     // Mobile mob1 = new Mobile();
     // Mobile mob2 = new Mobile();
@@ -72,6 +72,8 @@ public class Main {
     // mob1.show();
 
     //
+
+    Class.forName("Mobile"); // THIS LOGS IN STATIC BLOCK . Mobile Class was loaded in memory.
 
   }
 }
