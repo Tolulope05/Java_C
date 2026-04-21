@@ -1,26 +1,21 @@
 class Human {
-  private int age = 11;
-  private String name = "Navin";
+  private int age;
+  private String name;
 
-  // FETCH VARIABLE
   public int getAge() {
     return age;
   }
 
-  // FETCH VARIABLE
+  public void setAge(int age) {
+    this.age = age;
+  }
+
   public String getName() {
     return name;
   }
 
-  // SET VALUE
-  public void setAge(int a) {
-    age = a;
-  }
-
-  // SET VALUE
-  public void setName(String n) {
-    name = n;
-
+  public void setName(String name) {
+    this.name = name;
   }
 
 }
