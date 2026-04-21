@@ -1,18 +1,20 @@
 
 /**
- * Naming Convention
+ * Anonymous Object
  */
 
-public class Main {
-  public static void main(String[] args) {
-    //
+class A {
+  public A() {
+    System.out.println("OBJECT CREATED");
+  }
+
+  public void show() {
+    System.out.println("In a show");
   }
 }
 
-// Camel casing
-
-// class andninterface - Calc, Runnable
-// cariable and method - marks, show()
-// constants - PIE, BRAND
-
-// showMyMarks()
+public class Main {
+  public static void main(String[] args) {
+    new A(); // anonymous object;
+  }
+}
