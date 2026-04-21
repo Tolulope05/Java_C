@@ -1,13 +1,8 @@
 
 /**
- * STATIC METHOD
- * - Static method can be called directly with the class name
- * You can use a static variabel inside a static method, but you cannot use a
- * non static variable inside a static method
- * 
- * - IF YOU HAV ONJECT REFRERNCE< YOU CAN DO IRT
- * 
- * 
+ * STATIC BLOCK
+ * - STATIC BLOCK IS CALLED ONLY ONCE IN THE CLASS REGARDLESS OF HOW MANY
+ * REFRENCE OBJECT WAS CREATED. It is called when the Class is loaded in memory.
  */
 
 class Mobile {
@@ -15,6 +10,21 @@ class Mobile {
   private int price;
   private String name;
   static String developer;
+
+  public Mobile() {
+    System.out.println("IN CONSRTRUCTOR");
+  }
+
+  public Mobile(String brand, int price, String name) {
+    this.brand = brand;
+    this.price = price;
+    this.name = name;
+  }
+
+  static {
+    developer = "TOLULOPE";
+    System.out.println("IN STATIC BLOCK");
+  } // STATIC BLOCK IS CALLED ONLY ONCE IN THE CLASS
 
   public String getBrand() {
     return brand;
@@ -40,31 +50,9 @@ class Mobile {
     this.name = name;
   }
 
-  public Mobile(String brand, int price, String name) {
-    this.brand = brand;
-    this.price = price;
-    this.name = name;
-  }
-
-  public Mobile() {
-
-  }
-
   public void show() {
 
     System.out.println(brand + " : " + price + " : " + name + " : " + developer);
-  }
-
-  public static void show1() {
-    System.out.println("in static method");
-    // System.out.println(brand + " : " + price + " : " + name + " : " +
-    // developer);// BRAND NAME AND PRICE WONT WORKs
-  }
-
-  public static void show2(Mobile m) {
-    System.out.println("in static method with class Reference. ");
-    System.out.println(m.brand + " : " + m.price + " : " + m.name + " : " + developer);// BRAND NAME AND PRICE WONT
-                                                                                       // WORKs
   }
 
 }
@@ -72,24 +60,16 @@ class Mobile {
 public class Main {
   public static void main(String[] args) {
 
-    Mobile mob1 = new Mobile();
-    Mobile mob2 = new Mobile();
+    // Mobile mob1 = new Mobile();
+    // Mobile mob2 = new Mobile();
 
-    Mobile.developer = "Tolylope"; // WILL UPDATE FOR ALL
+    // Mobile.developer = "Tolylope"; // WILL UPDATE FOR ALL
 
-    mob1.setBrand("Apple");
-    mob1.setPrice(1500);
-    mob1.setName("SmartPhone");
+    // mob1.setBrand("Apple");
+    // mob1.setPrice(1500);
+    // mob1.setName("SmartPhone");
 
-    mob2.setBrand("Samsung");
-    mob2.setPrice(1700);
-    mob2.setName("SmartPhone");
-
-    mob1.show();
-    mob2.show();
-
-    Mobile.show1();
-    Mobile.show2(mob1);
+    // mob1.show();
 
     //
 
