@@ -1,5 +1,6 @@
 
 /**
+ * Naming Convention
  */
 
 public class Main {
@@ -7,3 +8,11 @@ public class Main {
     //
   }
 }
+
+// Camel casing
+
+// class andninterface - Calc, Runnable
+// cariable and method - marks, show()
+// constants - PIE, BRAND
+
+// showMyMarks()
