@@ -1,7 +1,12 @@
 
 /**
- * STATIC VARIABLE
- * - Static variable is shared by all objects
+ * STATIC METHOD
+ * - Static method can be called directly with the class name
+ * You can use a static variabel inside a static method, but you cannot use a
+ * non static variable inside a static method
+ * 
+ * - IF YOU HAV ONJECT REFRERNCE< YOU CAN DO IRT
+ * 
  * 
  */
 
@@ -50,6 +55,18 @@ class Mobile {
     System.out.println(brand + " : " + price + " : " + name + " : " + developer);
   }
 
+  public static void show1() {
+    System.out.println("in static method");
+    // System.out.println(brand + " : " + price + " : " + name + " : " +
+    // developer);// BRAND NAME AND PRICE WONT WORKs
+  }
+
+  public static void show2(Mobile m) {
+    System.out.println("in static method with class Reference. ");
+    System.out.println(m.brand + " : " + m.price + " : " + m.name + " : " + developer);// BRAND NAME AND PRICE WONT
+                                                                                       // WORKs
+  }
+
 }
 
 public class Main {
@@ -70,6 +87,9 @@ public class Main {
 
     mob1.show();
     mob2.show();
+
+    Mobile.show1();
+    Mobile.show2(mob1);
 
     //
 
