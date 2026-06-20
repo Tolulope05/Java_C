@@ -21,7 +21,8 @@ public class Main {
     VeryAdvCalc obj3 = new VeryAdvCalc();
     int r5 = obj3.add(3, 5);
     double r6 = obj3.power(5, 4);
-    System.out.println("VERY ADVANCE CALC " + r5 + " : " + r6);
+    double r7 = obj3.div(6,2);
+    System.out.println("VERY ADVANCE CALC " + r5 + " : " + r6 + " : " + r7);
 
   }
 }
