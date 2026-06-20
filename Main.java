@@ -1,11 +1,26 @@
 
 /**
- * MULTI LEVEL INHERITANCE
- * - is, has
- * Parent - child, Super - sub, base - derived.
- * Using extend keyword
- * Calc -> Adv Calc -> VeryAdvCalc
+ * MULTIPLE INHERITANCE
+ * 
  */
+
+class A {
+  // method logData 
+  public void logData(){
+    System.out.println("Log Class A");
+  }
+}
+
+class B {
+  // method logData 
+  public void logData(){
+    System.out.println("Log Class B");
+  }
+}
+class C  extends A,B{
+  // when it extends both, We try to access method logData.
+  // It doesnt know which to call
+} // Ambiguity Problem
 
 public class Main {
   public static void main(String[] args) {
