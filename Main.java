@@ -2,32 +2,26 @@
  * METHOD OVERRRIDING
  */
 
-class A {
-  public void show() {
-    System.out.println("in A show");
-  }
+class Calc {
+  public int add(int a, int b) {
+    return a + b;
 
-  public void config() {
-    System.out.println("in A Config");
   }
 }
 
-class B extends A {
-  public void show1() {
-    System.out.println("in B show");
-  }
+class AdvCalc extends Calc {
 
   @Override
-  public void show() {
-    System.out.println("in B show more");
+  public int add(int a, int b) {
+    return a + b + 1;
 
   }
 }
 
 public class Main {
   public static void main(String[] args) {
-    B obj = new B();
-    obj.show();
-    obj.config();
+    AdvCalc obj = new AdvCalc();
+    int r1 = obj.add(1, 2);
+    System.out.println(r1);
   }
 }
