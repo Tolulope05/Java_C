@@ -1,22 +1,4 @@
-/**
- * METHOD OVERRRIDING
- */
-
-class Calc {
-  public int add(int a, int b) {
-    return a + b;
-
-  }
-}
-
-class AdvCalc extends Calc {
-
-  @Override
-  public int add(int a, int b) {
-    return a + b + 1;
-
-  }
-}
+import tools.AdvCalc;
 
 public class Main {
   public static void main(String[] args) {
