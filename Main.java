@@ -1,6 +1,7 @@
 /**
  * THIS AND SUPER METHOD
  * - in every constructor, the default statement is super
+ * - every class in Java extends the object class
  * -
  */
 
@@ -19,20 +20,18 @@ class A {
 class B extends A {
   public B() {
     super();
-
     System.out.println("in B");
   }
 
   public B(int n) {
-    super();
-
+    this(); // This will execture the constructor for same class
     System.out.println("in B int");
   }
 }
 
 public class Main {
   public static void main(String[] args) {
-    B obj = new B();
+    B obj = new B(5);
 
   }
 }
