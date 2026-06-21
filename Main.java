@@ -1,37 +1,33 @@
 /**
- * THIS AND SUPER METHOD
- * - in every constructor, the default statement is super
- * - every class in Java extends the object class
- * -
+ * METHOD OVERRRIDING
  */
 
 class A {
-  public A() {
-    super();
-    System.out.println("in A");
+  public void show() {
+    System.out.println("in A show");
   }
 
-  public A(int n) {
-    super();
-    System.out.println("in A int");
+  public void config() {
+    System.out.println("in A Config");
   }
 }
 
 class B extends A {
-  public B() {
-    super();
-    System.out.println("in B");
+  public void show1() {
+    System.out.println("in B show");
   }
 
-  public B(int n) {
-    this(); // This will execture the constructor for same class
-    System.out.println("in B int");
+  @Override
+  public void show() {
+    System.out.println("in B show more");
+
   }
 }
 
 public class Main {
   public static void main(String[] args) {
-    B obj = new B(5);
-
+    B obj = new B();
+    obj.show();
+    obj.config();
   }
 }
