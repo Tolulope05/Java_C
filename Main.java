@@ -1,11 +1,29 @@
-import java.lang.*;
 
-import tools.*;
+import other.*;
+
+/**
+ * Access Modifiers
+ * PUBLIC || PRIVATE
+ * Same Class. Yes Yes
+ * 
+ * Same Package Yes No
+ * subclass
+ * 
+ * Same package Yes. No
+ * non-subclass
+ * 
+ * Different package Yes. No
+ * subclass
+ * 
+ * Different package Yes No
+ * non-subclass
+ */
 
 public class Main {
   public static void main(String[] args) {
-    AdvCalc obj = new AdvCalc();
-    int r1 = obj.add(1, 2);
-    System.out.println(r1);
+    A obj = new A();
+    System.out.println(obj.marks);
+    B obj1 = new B();
+    System.out.println(obj1.marks);
   }
 }

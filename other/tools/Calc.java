@@ -1,4 +1,4 @@
-package tools;
+package other.tools;
 
 public class Calc {
     public int add(int n1, int n2) {
