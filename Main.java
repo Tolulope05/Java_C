@@ -1,43 +1,13 @@
 
-// Dynamic Method dispatch
-class Computer {
-
-}
-
-class Laptop extends Computer {
-
-}
-
-class A {
-  public void show() {
-    System.out.println("in A show");
-
-  }
-}
-
-class B extends A {
-  public void show() {
-    System.out.println("in B show");
-
-  }
-}
-
-class C extends A {
-
-  public void show() {
-    System.out.println("in C show");
-
-  }
-}
+// final keyword - variable, method, class
+// - The variable once assigned cannot be changed. To make it constant
+// - Once you make a class final, you are stopping the inheritance, nobody can extends it.
+// - When you make your method final, no one can overide it
 
 public class Main {
   public static void main(String[] args) {
-    A obj = new A();
-    obj.show();
-    // Computer obj1 = new Laptop();
-    obj = new B();
-    obj.show();
-    obj = new C();
-    obj.show();
+    final int num = 8;
+    num = 9;
+    System.out.println(num);
   }
 }
