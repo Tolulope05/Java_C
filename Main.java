@@ -15,5 +15,8 @@ public class Main {
     A obj = new B(); // Upcasting
     obj.show1();
 
+    B obj1 = (B) obj; // Downcasting
+    obj1.show2();
+
   }
 }
