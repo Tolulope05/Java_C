@@ -1,29 +1,43 @@
 
-import other.*;
+// Dynamic Method dispatch
+class Computer {
 
-/**
- * Access Modifiers
- * PUBLIC || PRIVATE
- * Same Class. Yes Yes
- * 
- * Same Package Yes No
- * subclass
- * 
- * Same package Yes. No
- * non-subclass
- * 
- * Different package Yes. No
- * subclass
- * 
- * Different package Yes No
- * non-subclass
- */
+}
+
+class Laptop extends Computer {
+
+}
+
+class A {
+  public void show() {
+    System.out.println("in A show");
+
+  }
+}
+
+class B extends A {
+  public void show() {
+    System.out.println("in B show");
+
+  }
+}
+
+class C extends A {
+
+  public void show() {
+    System.out.println("in C show");
+
+  }
+}
 
 public class Main {
   public static void main(String[] args) {
     A obj = new A();
-    System.out.println(obj.marks);
-    B obj1 = new B();
-    System.out.println(obj1.marks);
+    obj.show();
+    // Computer obj1 = new Laptop();
+    obj = new B();
+    obj.show();
+    obj = new C();
+    obj.show();
   }
 }
