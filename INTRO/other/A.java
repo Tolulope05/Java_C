@@ -1,4 +1,4 @@
-package other;
+package INTRO.other;
 
 public class A {
     int marks = 6; // Can only be used in the same class. // DEFAULT

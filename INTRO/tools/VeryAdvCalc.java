@@ -1,4 +1,4 @@
-package other.tools;
+package INTRO.tools;
 
 public class VeryAdvCalc extends AdvCalc {
     public double power(int n1, int power) {
