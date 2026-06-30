@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class QuestionService {
     // int id[];
@@ -6,6 +7,7 @@ public class QuestionService {
     // String opt[];
 
     Question[] questions = new Question[5];
+    String[] selection = new String[5];
 
     public QuestionService() {
         questions[0] = new Question(1, "Which language is platform independent?", "Java", "C++", "Python", "C#",
@@ -19,9 +21,25 @@ public class QuestionService {
                 "boolean");
     }
 
-    public void displayQuestion() {
+    public void playQuiz() {
+        int i = 0;
         for (Question q : questions) {
-            System.out.println(q);
+            System.out.println("Question no. :" + q.getId());
+            System.out.println(q.getQuestion());
+            // GET THE OPTION
+            System.out.println("A. " + q.getOpt1());
+            System.out.println("B. " + q.getOpt2());
+            System.out.println("C. " + q.getOpt3());
+            System.out.println("D. " + q.getOpt4());
+            // GET INPUT FROM SOURCE
+            // SCANNER HELPS GET VALUE
+            Scanner sc = new Scanner(System.in);
+            selection[i] = sc.nextLine();
+            i++;
+        }
+
+        for (String s : selection) {
+            System.out.println(s);
         }
     }
 
