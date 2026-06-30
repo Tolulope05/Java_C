@@ -2,9 +2,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class QuestionService {
-    // int id[];
-    // String question[];
-    // String opt[];
 
     Question[] questions = new Question[5];
     String[] selection = new String[5];
@@ -39,8 +36,26 @@ public class QuestionService {
         }
 
         for (String s : selection) {
-            System.out.println(s);
+            System.out.println("User Selection: " + s);
         }
+    }
+
+    public void printScore() {
+        int score = 0;
+        for (int i = 0; i < questions.length; i++) {
+
+            Question que = questions[i];
+            String actualAnswer = que.getAnswer();
+
+            // COMPAARE WHAT USER ANSWER VS ANSWER
+            String userAnswer = selection[i];
+
+            if (actualAnswer.equals(userAnswer)) {
+                score++;
+            }
+
+        }
+        System.out.println("Your Score is: " + score);
     }
 
     public void displayQuestion2() {
