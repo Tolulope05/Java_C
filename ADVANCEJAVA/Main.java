@@ -1,44 +1,43 @@
 /**
- * ABSTRACT CLASS METHOD
+ * INNER CLASS
  */
 public class Main {
     public static void main(String[] args) {
-        WagonR obj = new WagonR();
-        obj.playMusic();
-        obj.drive();
-        obj.fly();
+        A obj = new A();
+        obj.show();
+        A.B obj1 = obj.new B();
+        obj1.config();
+        A.C obj2 = new A.C();
+        obj2.config();
+
     }
 }
 
 /**
- * Car - abstract
+ * A
  */
-abstract class Car { // ABSTRACT CLASS
-    public abstract void drive();
+class A {
 
-    public abstract void fly();
+    int age;
 
-    public void playMusic() {
-        System.out.println("PLAY MUSIC");
-    }
-}
+    public void show() {
 
-/**
- * WagonR
- */
-class WagonR extends Car { // CONCRETE CLASS
-    public WagonR() {
-        //
-
+        System.out.println("IN SHOW");
     }
 
-    public void drive() {
+    /**
+     * B
+     */
+    class B {
+        public void config() {
+            System.out.println("IN CONFIG B");
+        }
+    }
 
-        System.out.println("WAGON DRIVING..");
-    };
+    static class C {
+        public void config() {
+            System.out.println("IN CONFIG C");
+        }
+    }
 
-    public void fly() {
-
-        System.out.println("WAGON FLYING..");
-    };
 }
