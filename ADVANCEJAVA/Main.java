@@ -2,6 +2,9 @@
  * INTERFACE
  * - Just show you the design
  * - We use the keyword implement
+ * - class - class => extends
+ * - class - interface => implement
+ * - interface - interface => extneds
  */
 public class Main {
     public static void main(String[] args) {
@@ -13,10 +16,13 @@ public class Main {
         System.out.println(A.age);
         System.out.println(A.area);
 
+        X objX = new B();
+        objX.run();
+
     }
 }
 
-class B implements A {
+class B implements A, Y {
 
     public void show() {
         System.out.println("IN SHOW");
@@ -24,6 +30,16 @@ class B implements A {
 
     public void config() {
         System.out.println("IN CONFIG");
+
+    }
+
+    public void run() {
+        System.out.println("IN RUN");
+
+    }
+
+    public void keep() {
+        System.out.println("IN KEEP");
 
     }
 }
@@ -37,3 +53,17 @@ interface A {
     void config(); // BENDHIND THE SCENE public abstract is there.
 }
 // WE GET INTERFACE SO THAT WE CAN DESIGN SOMETHING
+
+/**
+ * X
+ */
+interface X {
+    void run();
+}
+
+/**
+ * Y
+ */
+interface Y extends X {
+    void keep();
+}
