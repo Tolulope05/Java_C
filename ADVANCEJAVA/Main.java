@@ -1,43 +1,25 @@
 /**
- * INNER CLASS
+ * ANONYMOUS INNER CLASS
  */
 public class Main {
     public static void main(String[] args) {
-        A obj = new A();
+        A obj = new A() {
+            public void show() {
+                System.out.println("In NEW SHOW");
+            }
+        };
         obj.show();
-        A.B obj1 = obj.new B();
-        obj1.config();
-        A.C obj2 = new A.C();
-        obj2.config();
-
     }
 }
 
-/**
- * A
- */
 class A {
-
-    int age;
-
     public void show() {
-
-        System.out.println("IN SHOW");
+        System.out.println("IN A SHOW");
     }
-
-    /**
-     * B
-     */
-    class B {
-        public void config() {
-            System.out.println("IN CONFIG B");
-        }
-    }
-
-    static class C {
-        public void config() {
-            System.out.println("IN CONFIG C");
-        }
-    }
-
 }
+
+// class B extends A {
+// public void show() {
+// System.out.println("IN B SHOW");
+// }
+// }
