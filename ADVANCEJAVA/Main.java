@@ -1,26 +1,24 @@
 /**
- * INTERFACES TYPES
- * - Normal: has 2 or more methods
- * - Functional (SAM) - Single Abstract method : single methods
- * - Marker: Interface with no method, used to update something to the compiler
- * e.g serialization or deserialization
+ * FUNCTIONAL INTERFACE
+ * 
  */
 public class Main {
     public static void main(String[] args) {
-        B obj = new B();
-        obj.showTheMethodWhichBelongToThisClass();
+        //
     }
 }
 
-class A {
-    public void showTheMethodWhichBelongToThisClass() {
-        System.out.println("IN A SHOW");
+/**
+ * B implements A
+ */
+class B implements A {
+    public void show() {
     }
 }
 
-class B extends A {
-    @Override // ANNOTATION: I am trying to override the method
-    public void showTheMethodWhichBelongToThisClass() {
-        System.out.println("IN B SHOW");
-    }
+@FunctionalInterface
+interface A {
+    void show();
+
+    // void run();
 }
