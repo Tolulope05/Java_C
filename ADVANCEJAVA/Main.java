@@ -5,14 +5,12 @@
 public class Main {
     public static void main(String[] args) {
         //
-    }
-}
-
-/**
- * B implements A
- */
-class B implements A {
-    public void show() {
+        A obj = new A() {
+            public void show() {
+                System.out.println("This is an anonymous class");
+            }
+        };
+        obj.show();
     }
 }
 
@@ -20,5 +18,4 @@ class B implements A {
 interface A {
     void show();
 
-    // void run();
 }
