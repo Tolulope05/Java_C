@@ -10,19 +10,18 @@ public class Main {
         // System.out.println("This is an anonymous class");
         // }
         // };
-        A obj = () -> System.out.println("This is an anonymous class");
-
-        obj.show();
         B obj2 = (v) -> System.out.println("This is an anonymous class " + v);
-
         obj2.show(2);
+        A obj = (w, j) -> w + j;
+        int result = obj.add(5, 7);
+        System.out.println(result);
 
     }
 }
 
 @FunctionalInterface
 interface A {
-    void show();
+    int add(int i, int j);
 
 }
 
