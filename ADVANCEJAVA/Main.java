@@ -1,5 +1,9 @@
 /**
- * ANOTATION
+ * INTERFACES TYPES
+ * - Normal: has 2 or more methods
+ * - Functional (SAM) - Single Abstract method : single methods
+ * - Marker: Interface with no method, used to update something to the compiler
+ * e.g serialization or deserialization
  */
 public class Main {
     public static void main(String[] args) {
