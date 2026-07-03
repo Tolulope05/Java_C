@@ -1,37 +1,21 @@
 /**
- * INTERFACE NEED FOR INTERFACe
+ * ENUMS
+ * - ordinal is used to get the location of the constsnt in the enum.
+ * - values() is used to know all the list in the enum.
  */
 public class Main {
     public static void main(String[] args) {
-        Computer lap = new Laptop();
-        Computer desk = new Desktop();
-        Developer dev = new Developer();
-        dev.devApp(lap);
+        int i = 5;
+        Status s = Status.Pending;
+        System.out.println(s);
+        System.out.println(s.ordinal()); // 2
+        Status[] statuses = s.values();
+        for (Status ss : statuses) {
+            System.out.println(s.ordinal() + ". " + ss);
+        }
     }
 }
 
-class Developer {
-    public void devApp(Computer lap) {
-        lap.code();
-        System.out.println("Coding...");
-    }
-}
-
-class Laptop implements Computer {
-    // class Laptop extends Computer {
-    public void code() {
-        System.out.println("Code, Compile and run");
-    }
-}
-
-class Desktop implements Computer {
-    // class Desktop extends Computer {
-    public void code() {
-        System.out.println("Code, Compile and run : faster");
-    }
-}
-
-interface Computer {
-    // abstract class Computer {
-    abstract public void code();
+enum Status {
+    Running, Failed, Pending, Success; // NAMED CONSTANTS
 }
