@@ -1,32 +1,29 @@
 /**
- * LAMBDA EXPRESSION
+ * EXCEPTIONS
+ * - Compile Time Error
+ * - Runtime Error : Exceptions
+ * - Logical Error
  * 
  */
 public class Main {
     public static void main(String[] args) {
+        int i = 0;
+        int j = 0;
+        int[] nums = new int[5];
+        try {
 
-        // A obj = new A() {
-        // public void show() {
-        // System.out.println("This is an anonymous class");
-        // }
-        // };
-        B obj2 = (v) -> System.out.println("This is an anonymous class " + v);
-        obj2.show(2);
-        A obj = (w, j) -> w + j;
-        int result = obj.add(5, 7);
-        System.out.println(result);
+            j = 18 / i;
+            System.out.println(nums[1]);
+            System.out.println(nums[5]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException: " + e.toString());
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException: " + e.toString());
+        } catch (Exception e) {
+            System.out.println("ArithmeticException: " + e);
+        }
+        System.out.println(j);
 
+        System.out.println("Bye");
     }
-}
-
-@FunctionalInterface
-interface A {
-    int add(int i, int j);
-
-}
-
-@FunctionalInterface
-interface B {
-    void show(int i);
-
 }
