@@ -1,29 +1,29 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
 /**
- * EXCEPTIONS
- * - Compile Time Error
- * - Runtime Error : Exceptions
- * - Logical Error
- * 
+ * BUFFEREDREADER AND SCANNER
+ * -
  */
 public class Main {
     public static void main(String[] args) {
-        int i = 0;
-        int j = 0;
-        int[] nums = new int[5];
+        System.out.println("Enter a number:");
         try {
+            // int num = System.in.read(); // Gives ASCII value for the number you enter
+            // System.out.println(num);
+            // BETTER WAY (BUFFEREDREADER)
+            InputStreamReader in = new InputStreamReader(System.in);
+            BufferedReader bf = new BufferedReader(in);
+            int num = Integer.parseInt(bf.readLine());
+            System.out.println(num);
+            bf.close(); // ALWAYS CLOSE RESOURCES
+            // ANOTHER WAY (SCANNER)
+            Scanner sc = new Scanner(System.in);
 
-            j = 18 / i;
-            System.out.println(nums[1]);
-            System.out.println(nums[5]);
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("ArrayIndexOutOfBoundsException: " + e.toString());
-        } catch (ArithmeticException e) {
-            System.out.println("ArithmeticException: " + e.toString());
         } catch (Exception e) {
-            System.out.println("ArithmeticException: " + e);
+            System.out.println(e.getStackTrace());
+            // TODO: handle exception
         }
-        System.out.println(j);
-
-        System.out.println("Bye");
     }
 }
