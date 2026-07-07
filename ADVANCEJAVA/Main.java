@@ -1,21 +1,31 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
- * TRY WITH RESOURCES
- * -
+ * THREAD
+ * - start method to start the thread, We need to have trhe run method in the
+ * class we want to thread
  */
 public class Main {
-    public static void main(String[] args) throws IOException {
-        try (BufferedReader bf = new BufferedReader(new InputStreamReader(System.in))) {
-            System.out.println(bf.readLine());
-        } catch (Exception e) {
-            System.out.println(e.getStackTrace());
+    public static void main(String[] args) {
+        A objA = new A();
+        B objB = new B();
+        objA.start(); // start a new thread
+        objB.start(); // start a new theead
+
+    }
+}
+
+class A extends Thread {
+    public void run() {
+        for (int i = 0; i < 100; i++) {
+            System.out.println(i + ": HI");
         }
-        // finally {
-        // // WHEN YOU WANT TO CLOSE A RESOURCE, USE FINALLY
-        // // bf.close();
-        // }
+    }
+}
+
+class B extends Thread {
+    public void run() {
+        for (int i = 0; i < 100; i++) {
+            System.out.println(i + ":Hello");
+        }
     }
 }
