@@ -9,22 +9,22 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) {
-        Comparator comp = new Comparator<Integer>() {
-            public int compare(Integer i, Integer j) {
-                if (i % 10 > j % 10) {
+        Comparator comp = new Comparator<String>() {
+            public int compare(String i, String j) {
+                if (i.length() > j.length()) {
                     return 1;
                 }
                 return -1;
             }
         };
-        List<Integer> nums = new ArrayList<>();
-        nums.add(43);
-        nums.add(31);
-        nums.add(72);
-        nums.add(29);
+        List<String> values = new ArrayList<>();
+        values.add("Tolu");
+        values.add("Aliya");
+        values.add("Ope");
+        values.add("Fakunle");
 
-        Collections.sort(nums, comp);
-        System.out.println(nums);
+        Collections.sort(values, comp);
+        System.out.println(values);
 
     }
 }
