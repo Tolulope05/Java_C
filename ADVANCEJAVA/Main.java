@@ -1,33 +1,30 @@
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 /**
- * Map (HashMap and Hashtable)
- * - put method
- * - get method
- * Keys are unique and cant be repeated but the values can be changed
- * Keys are a Set
- * - keySet methofs
+ * Comparator vs Comparable
+ * - Compare two values and swap
  */
 public class Main {
     public static void main(String[] args) {
-        // Map<String, Integer> students = new HashMap<>();
-        Map<String, Integer> students = new Hashtable<>();
-        students.put("Navin", 56);
-        students.put("Harsh", 23);
-        students.put("Sushil", 67);
-        students.put("Kiran", 92);
-        students.put("Harsh", 45);
+        Comparator comp = new Comparator<Integer>() {
+            public int compare(Integer i, Integer j) {
+                if (i % 10 > j % 10) {
+                    return 1;
+                }
+                return -1;
+            }
+        };
+        List<Integer> nums = new ArrayList<>();
+        nums.add(43);
+        nums.add(31);
+        nums.add(72);
+        nums.add(29);
 
-        System.out.println(students);
-        System.out.println(students.get("Harsh"));
-
-        System.out.println(students.keySet());
-        System.out.println(students.values());
-        for (String n : students.keySet()) {
-            System.out.println(students.get(n));
-        }
+        Collections.sort(nums, comp);
+        System.out.println(nums);
 
     }
 }
