@@ -1,32 +1,33 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.Arrays;
 import java.util.List;
 
 /**
- * Comparator vs Comparable
- * - Compare two values and swap
+ * STEAM API
  */
 public class Main {
     public static void main(String[] args) {
-        // Comparator comp = new Comparator<Student>() {
-        // public int compare(Student i, Student j) {
-        // if (i.age > j.age) {
-        // return 1;
-        // }
-        // return -1;
-        // }
-        // };
-        Comparator<Student> comp = (i, j) -> i.age > j.age ? 1 : -1;
-        List<Student> studs = new ArrayList<>();
-        studs.add(new Student(21, "Navin"));
-        studs.add(new Student(12, "Aliya"));
-        studs.add(new Student(18, "Ope"));
-        studs.add(new Student(20, "Fakunle"));
+        List<Integer> nums = Arrays.asList(4, 5, 7, 3, 2, 6);
+        System.out.println(nums);
+        // int sum = 0;
+        // for (int n : nums) {
 
-        Collections.sort(studs, comp); // Comparator
-        Collections.sort(studs); // Comparable
-        System.out.println(studs);
+        // if (n % 2 == 0) {
+        // n = n * 2;
+        // sum = sum + n;
+        // }
+        // }
+        // System.out.println(sum);
+
+        // for (int i = 0; i < nums.size(); i++) {
+        // System.out.println(nums.get(i));
+
+        // }
+
+        // for (int n : nums) {
+        // System.out.println(n);
+        // }
+
+        nums.forEach(n -> System.out.println(n));
 
     }
 }
