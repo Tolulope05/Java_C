@@ -23,37 +23,6 @@ public class Main {
         int result = nums.stream().filter(n -> n % 2 == 0).map(n -> n * 2).reduce(0, (p, n) -> p + n);
         System.out.println(result);
 
-        // System.out.println(nums);
-        // int sum = 0;
-        // for (int n : nums) {
-
-        // if (n % 2 == 0) {
-        // n = n * 2;
-        // sum = sum + n;
-        // }
-        // }
-        // System.out.println(sum);
-
-        // for (int i = 0; i < nums.size(); i++) {
-        // System.out.println(nums.get(i));
-
-        // }
-
-        // for (int n : nums) {
-        // System.out.println(n);
-        // }
-
-        // nums.forEach(n -> System.out.println(n));
-
-        // Consumer<Integer> con = new Consumer<Integer>() {
-        // public void accept(Integer n) {
-        // System.out.println(n);
-        // }
-        // };
-        // Consumer<Integer> con = (n) -> System.out.println(n);
-
-        // nums.forEach(con);
-
     }
 }
 
