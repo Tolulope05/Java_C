@@ -7,18 +7,20 @@ import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 /**
- * OPTIONAL CLASS
+ * METHOD REFERNCE
+ * - passing a method name inside the method to use it
  * 
  */
 public class Main {
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("Navin", "Laxmi", "John", "John", "Kishna");
-        Optional<String> name = names.stream().filter((x) -> x.contains("J")).findFirst();
-        String name2 = names.stream().filter((x) -> x.contains("Z")).findFirst().orElse(null);
 
-        System.out.println(name.get());
-        System.out.println(name.orElse(null));
-        System.out.println(name2);
+        List<String> names = Arrays.asList("Navin", "Hush", "John");
+        List<String> uNames = names.stream().map((e) -> e.toUpperCase()).toList();
+        List<String> lNames = uNames.stream().map(String::toLowerCase).toList(); // Method refernce
+        System.out.println(uNames);
+        System.out.println(lNames);
+
+        lNames.forEach(System.out::println);
 
     }
 }
